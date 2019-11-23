@@ -1,0 +1,47 @@
+
+if (! outFile)
+{  cout << “Arquivo saida.txt nao pode ser aberto” << endl;
+abort(); }
+
+arquivo.eof();
+arquivo.close()
+
+
+//////////////////////////////
+//torna a string lowercase
+    for (std::string::size_type i=0; i<texto.length(); ++i)
+        texto[i] = std::tolower(texto[i],loc);
+
+    //retira caracteres especias e sinais de pontuacao
+    for(int i=0;texto[i]!='\0';i++){
+        if ( !isdigit(texto[i],loc) ){
+            if ( !isalpha(texto[i],loc) )
+                texto.erase(i,1);
+______________________________________________
+//Numero de dados do documento
+    int tamanho() const;
+    
+    //Quantidade de vezes que uma palavra aparece
+    int Aparicoes(std::string texto);
+    
+    //se a palavra existe no doc
+    //PRE-CONDICAO = O documento nao esta vazio
+    bool Pertence(std::string palavra);
+    
+    //Retorna a ultima palavra do documento
+    //PRE-CONDICAO = O documento nao esta vazio
+    std::string UltimPalavra() const;
+    
+    //Remove a ultima palavra do documento
+    //PRE-CONDICAO = O documento nao esta vazio
+    void RemoUltima();
+
+//Compara dois documentos
+    bool operator==(Documento const d1);
+    
+    //Apaga os elementos de um documento
+    //PRE-CONDICAO = O documento nao esta vazio
+    void Apagar();
+    
+    //Retorna qual arquivo foi retirado o documento
+    std::string Fonte() const;
